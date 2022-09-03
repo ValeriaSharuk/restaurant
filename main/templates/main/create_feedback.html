@@ -1,0 +1,18 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+{% block title %}Home{% endblock %}
+{% block content %}
+<div class="cre">
+    <form method="post">
+        {% csrf_token %}
+        <br><br><br><br><br>
+        {{ form.full_name }}<br>
+        {{ form.full_text }}<br>
+        {{ form.date }}<br>
+        <span>{{ error }}</span>
+        <button class="btn btn-dark" type="submit">Добавить
+            отзыв
+        </button>
+    </form>
+</div>
+{% endblock %}

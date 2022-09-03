@@ -1,0 +1,15 @@
+<html>
+<head>
+    <title>login</title>
+    <link rel="stylesheet" href="{% static 'main/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/style.css' %}">
+</head>
+<body>
+    <form action="{% url login %}" method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" id="submit" name="submit" value="Login" />
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LogIn</title>
+</head>
+<body>
+    <div class="inp">
+        <h5>ЛИЧНЫЙ КАБИНЕТ</h5>
+        <form action="" method="post">
+            {% csrf_token %}
+            <div class="form-group">
+                {{ form.as_p }}
+                 <button type="submit" class="btn btn-light">Войти</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

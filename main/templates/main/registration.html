@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration</title>
+    <link rel="stylesheet" href="{% static 'main/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/style.css' %}">
+</head>
+<body>
+    <div class="rega">
+        <a>Registration</a>
+        <form action="" method="post">
+            {% csrf_token %}
+            <div class="forms">
+                {{ form.as_p }}
+                <button type="submit" class="btn btn-light">Registration</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

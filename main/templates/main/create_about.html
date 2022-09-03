@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Добавить о нас</title>
+    <link rel="stylesheet" href="{% static 'main/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/style.css' %}">
+</head>
+<body>
+<div class="cre">
+    <h5>ДОБАВИТЬ ИНФОРМАЦИЮ О КОМПАНИИ</h5>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.title }}<br>
+        {{ form.full_text }}<br>
+        {{ form.date }}<br>
+        <span>{{ error }}</span>
+        <button class="btn btn-dark" type="submit">Добавить</button>
+    </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,95 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+{% block title %}About{% endblock %}
+{% block content %}
+
+
+    <!-- bradcam_area  -->
+    <div class="bradcam_area bradcam_bg_1">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="bradcam_text text-center">
+                        <h3>О нас</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/ bradcam_area  -->
+
+
+    <div class="main_about_wrap">
+        <div class="container">
+                    {% for el in abouts %}
+                        <h3>{{ el.title }}</h3> <br>
+                        <p>{{ el.full_text }}</p>
+                    {% endfor %}
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="row">
+                        <div class="col-xl-6 col-md-6">
+                            <div class="about_thumb">
+                                <img src="{% static 'main/img/about/about_1.png' %}" alt="">
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-md-6">
+                            <div class="about_thumb">
+                                <img src="{% static 'img/about/about_2.png' %}" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- about_area_start -->
+    <div class="about_area">
+        <div class="icon_1 d-none d-md-block">
+            <img src="{% static 'main/img/icon/1.png' %}" alt="">
+        </div>
+        <div class="icon_2 d-none d-md-block">
+            <img src="{% static 'main/img/icon/2.png' %}" alt="">
+        </div>
+        <div class="icon_3 d-none d-md-block">
+            <img src="{% static 'main/img/icon/3.png' %}" alt="">
+        </div>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="about_info_wrap">
+                            <h3>Место, в которые вы захотите вернуться</h3>
+                            <span class="long_dash"></span>
+                        <p>Здесь мы готовим самую вкусную индийскую кухню в городе. Вам определенно у нас понравится! </p>
+                        <ul class="food_list">
+                            <li>
+                                <img src="{% static 'main/img/svg_icon/salad.svg' %}" alt="">
+                                <span>Свежие ингридиенты</span>
+                            </li>
+                            <li>
+                                <img src="{% static 'main/img/svg_icon/tray.svg' %}" alt="">
+                                <span>Профессиональные повара</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="about_img">
+                        <div class="img_1">
+                            <img src="{% static 'main/img/about/big.png' %}" alt="">
+                        </div>
+                        <div class="small_img">
+                            <img src="{% static 'main/img/about/small.png' %}" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>
+{% endblock %}
